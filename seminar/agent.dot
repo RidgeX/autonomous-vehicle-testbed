@@ -1,0 +1,12 @@
+digraph G {
+	graph [dpi=200,fontname="Ubuntu Bold"];
+	node [fontname="Ubuntu",shape=box];
+	edge [fontname="Ubuntu"];
+	s0 [label="Task"];
+	s1 [label="Agent"];
+	s2 [label="Environment"];
+	s0 -> s1 [label="  Results    ",dir=back];
+	s1 -> s2 [label="  Percepts    ",dir=back];
+	s2 -> s1 [label="  Actions  ",dir=back];
+	s1 -> s0 [label="  Goals  ",dir=back];
+}

@@ -1,0 +1,9 @@
+[submodule "cars-controller"]
+	path = cars-controller
+	url = https://github.com/raybarker95/cars-controller.git
+[submodule "testbed-tracking"]
+	path = testbed-tracking
+	url = https://github.com/aaron-hurst/testbed-tracking.git
+[submodule "zenwheels-python"]
+	path = zenwheels-python
+	url = https://github.com/RidgeX/zenwheels-python.git

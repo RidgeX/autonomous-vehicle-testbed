@@ -1,0 +1,31 @@
+digraph G {
+	graph [dpi=200,fontname="Ubuntu Bold"];
+	node [fontname="Ubuntu"];
+	edge [fontname="Ubuntu"];
+    s0 [label="Camera",shape=doublecircle];
+	subgraph cluster_0 {
+	    style=filled;
+		color=lightgrey;
+		label="C++";
+		node [style=filled,fillcolor=white];
+		s1 [label="Real-time tracking\nand identification"];
+	}
+	subgraph cluster_1 {
+	    style=filled;
+	    color=lightgrey;
+	    label="Python";
+		node [style=filled,fillcolor=white];
+		s2 [label="Environment modeller"];
+		s3 [label="Agent controller"];
+		s4 [label="Bluetooth system"];
+	}
+	s5 [label="Cars",shape=rect];
+	s0 -> s1 [label="Video"];
+	s0 -> s2 [style=invis];
+	s1 -> s2 [label="Vector of info",constraint=false];
+	s1 -> s5 [style=invis];
+	s2 -> s3 [label="Error feedback",dir=back];
+	s3 -> s2 [label="Agent precepts",dir=back];
+	s3 -> s4 [label="Actions"];
+	s4 -> s5 [label="Update messages"];
+}
